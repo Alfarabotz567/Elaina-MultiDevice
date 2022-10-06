@@ -279,7 +279,7 @@ export async function handler(chatUpdate) {
                 if (!('welcome' in chat))
                     chat.welcome = true
                 if (!('detect' in chat))
-                    chat.detect = false
+                    chat.detect = true
                 if (!('sWelcome' in chat))
                     chat.sWelcome = ''
                 if (!('sBye' in chat))
@@ -332,14 +332,14 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
+                if (!('autoread' in settings)) settings.autoread = true
                 if (!('restrict' in settings)) settings.restrict = false
                 if (!('anticall' in settings)) settings.anticall = true
                 if (!('autorestart' in settings)) settings.autorestart = false
                 if (!('restartDB' in settings)) settings.restartDB = 0
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: false,
+                autoread: true,
                 autorestart: false,
                 anticall: true,
                 restartDB: 0,
@@ -698,10 +698,10 @@ export async function participantsUpdate({ id, participants, action }) {
                                 membercount: groupMetadata.participants.length
                             })
     conn.sendButtonDoc(id, text, wm, action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'ok', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://instagram.com/Xiao_yan_21",
+    mediaUrl: "https://instagram.com/irfaanabdulhafizh",
     mediaType: 2, 
     description: "https://youtu.be/-TleC8rbDT8", 
-    title: 'Elaina-MultiDevice',
+    title: 'Alfarabotz-MultiDevice',
     body: wm,
     thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
     sourceUrl: sig
@@ -762,10 +762,10 @@ export async function deleteUpdate(message) {
             this.send2ButtonDoc(msg.chat, `
 Terdeteksi @${participant.split`@`[0]} telah menghapus pesan. 
 Untuk mematikan fitur ini, ketik
-*.enable delete*
+*.disable delete*
           
 Untuk menghapus pesan yang dikirim oleh Bot, reply pesan dengan perintah
-*.delete*`, author, '🔖 Matikan Fitur', '.on delete', '🎀 Menu', '.menu', msg, adReply)
+*.delete*`, author, '🔖 Matikan Fitur', '.off delete', '🎀 Menu', '.menu', msg, adReply)
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
         console.error(e)
