@@ -60,7 +60,7 @@ global.ppulsa = '081646829895' //Nomor SimCard Yang Kamu Pake
 global.psaweria = 'https://saweria.co/Irfaan567' //Link Saweriamu Kalo Nggada Ketik - aja
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6289531704997' //Nomor Bot
+global.nomorbot = '6281646829895' //Nomor Bot
 global.nomorown = '6285624823115' //Nomor Owner
 global.namebot = 'Alfarabotz' //Nama Bot
 global.nameown = 'Irfaan Official' // Nama Owner
